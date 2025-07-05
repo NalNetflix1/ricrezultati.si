@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Rezultati</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #table-container {
+      display: none;
+      margin-top: 30px;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 10px 20px;
+      min-width: 80px;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Vnesite geslo</h2>
+  <input type="password" id="password" placeholder="Geslo">
+  <button onclick="checkPassword()">Potrdi</button>
+
+  <div id="table-container">
+    <h2>Razpredelnica</h2>
+    <table>
+      <tbody>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const correctPassword = "2801004500067";
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === correctPassword) {
+        document.getElementById("table-container").style.display = "block";
+        document.querySelector("input").style.display = "none";
+        document.querySelector("button").style.display = "none";
+        document.querySelector("h2").style.display = "none";
+      } else {
+        alert("Napačno geslo.");
+      }
+    }
+  </script>
+</body>
+</html>
