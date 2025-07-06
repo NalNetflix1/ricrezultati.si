@@ -19,8 +19,12 @@
     }
     td, th {
       border: 1px solid black;
-      padding: 10px 20px;
-      min-width: 80px;
+      padding: 8px 16px;
+      min-width: 90px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
     }
     input[type="password"] {
       padding: 10px;
@@ -29,6 +33,10 @@
     button {
       padding: 10px 20px;
       font-size: 16px;
+      margin-left: 10px;
+    }
+    .bold {
+      font-weight: bold;
     }
   </style>
 </head>
@@ -38,14 +46,53 @@
   <button onclick="checkPassword()">Potrdi</button>
 
   <div id="table-container">
-    <h2>Razpredelnica</h2>
+    <h2>Rezultati izpitov</h2>
     <table>
-      <tbody>
-        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-      </tbody>
+      <tr>
+        <th class="bold">Predmet</th>
+        <th class="bold">Izpitna pola 1</th>
+        <th class="bold">Izpitna pola 2</th>
+        <th class="bold">Ustno</th>
+        <th class="bold">Praktičen del izpita</th>
+        <th class="bold">Skupaj</th>
+        <th class="bold">Ocena</th>
+      </tr>
+      <tr>
+        <td class="bold">Slovenščina</td>
+        <td>66%</td>
+        <td>54%</td>
+        <td>/</td>
+        <td>/</td>
+        <td>63,6%</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td class="bold">Angleščina</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+      </tr>
+      <tr>
+        <td class="bold">Gospodarstvo</td>
+        <td>23%</td>
+        <td>31%</td>
+        <td>/</td>
+        <td>/</td>
+        <td>24,6%</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td class="bold">Projektno delo</td>
+        <td>/</td>
+        <td>/</td>
+        <td>65%</td>
+        <td>78%</td>
+        <td>67,6%</td>
+        <td>3</td>
+      </tr>
     </table>
   </div>
 
